@@ -4,7 +4,7 @@ Full name:
   - input type: text input area <input type="text" name="fullname">
 
 Email:
- - input type: text input area <input type="email" name="email">
+ - input type: text input area that must be in email format (with @...) <input type="email" name="email">
  
 Password:
 - input type: text input area that masks characters as bullet points <input type="password" name="password">
