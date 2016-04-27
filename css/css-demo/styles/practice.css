@@ -1,0 +1,22 @@
+section#contact-info {
+ font-size: .8em;
+}
+
+section.job {
+ background-color: #e9e5dc;
+ border-radius: 15px;
+ padding: 5px;
+ margin-bottom: 20px;
+}
+
+ul.accomplishments {
+ font-size: .8em;
+}
+
+h2.experience-category:hover{
+	background-color: red;
+}
+
+section#volunteer-experience section.volunteer-gig {
+	font-style: italic;
+}
