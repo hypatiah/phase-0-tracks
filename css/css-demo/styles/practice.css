@@ -12,3 +12,11 @@ section.job {
 ul.accomplishments {
  font-size: .8em;
 }
+
+h2.experience-category:hover{
+	background-color: red;
+}
+
+section#volunteer-experience section.volunteer-gig {
+	font-style: italic;
+}
