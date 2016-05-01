@@ -2,7 +2,7 @@
 	margin-left: 600px;
 	margin-right: 600px;
 	margin-top:200px;
-	position: fixed;
+	position: relative;
 	z-index: 1;
 
 }
@@ -10,17 +10,19 @@
 	margin-left: 600px;
 	margin-right: 600px;
 	margin-top:200px;
-	position: fixed;
-	top: 108px;
-	left: 50px;
+	position: relative;
+	/*top: 108px; */
+	bottom: 395px;
+	right: 560px;
 	z-index: 2;
 }
 .hat {
 	margin-left: 600px;
 	margin-right: 600px;
 	margin-top:200px;
-	position: fixed;
-	bottom: 430px;
-	left: 1px;
+	position: relative;
+	/*bottom: 430px;*/
+	bottom: 850px;
+	right: 610px;
 	z-index: 3;
 }
