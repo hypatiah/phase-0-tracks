@@ -1,3 +1,26 @@
-body {
-	background-color: blue;
+.column-1 {
+  background-color: yellow;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  border-style: double;
+  padding: 5px;
+}
+
+.column-2 {
+  background-color: green;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  border-style: double;
+  padding: 5px;
+}
+
+header {
+  color: blue;
+  font-family: Papyrus;
+}
+
+footer {
+  color: red;
 }
