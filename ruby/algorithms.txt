@@ -1,0 +1,27 @@
+Algorithm for using an elevator:
+
+until inside elevator
+- if door is open, walk forward
+- else wait for door to open
+if want to go to top floor
+	press “3”
+elsif want to go to garage
+	press “G”
+else
+	press “2”
+
+while inside elevator
+if doors open
+	walk forward 
+	be outside
+else wait for doors to open
+
+Algorithm for PB&J:
+- For every PB&J:
+	- get out 2 slices of bread
+	- put the bread in the toaster
+	- while the bread is toasting
+		take out a jar of peanut butter and jelly and a knife to spread
+	- spread 1.5 tbsp of peanut butter on one slice
+	- spread 2 tbsp of jelly on the other slice
+	- put the two pieces of bread together 
