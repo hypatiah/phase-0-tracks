@@ -17,7 +17,7 @@ while count < employees
 	donelist = nil
 	until (donelist == "y") || (allergies == "sunshine") == true #continues loop until they're done or if they put sunshine as an allergy
 		puts "Please name your allergies one at a time:"
-		allegergies = gets. chomp
+		allergies = gets. chomp
 		puts "Are you done listing your allergies? (y/n)"
 		donelist = gets.chomp
 	end
