@@ -20,3 +20,14 @@ cookies.delete_at(2)
 p cookies
 cookies = cookies.insert(2,"thin mint")
 p cookies
+cookies.delete("chocolate chip")
+p cookies
+if cookies.include?("sugar")
+  p "We do carry sugar cookies"
+else
+  p "Sorry were all outta sugah"
+end
+garden_tools = ["hoes", "shovels", "rakes"]
+garden_bakery = cookies + garden_tools
+p garden_bakery
+questionaire(1, nil, "happy")
