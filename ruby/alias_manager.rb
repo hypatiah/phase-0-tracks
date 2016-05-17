@@ -8,7 +8,16 @@ real_name = gets.chomp
 #split up the characters of the real_name
 chopped_name = real_name.chars 
 puts chopped_name
-
+#for each element in chopped name, do the following:
+chopped_name.each do |character|
+	vowel = ["a", "e", "i", "o", "u"]
+	if  vowel.include? character
+		i = 0
+		if character == vowel(i)
+			character = vowel(i + 1)
+		end
+	end
+end
 
 
 
