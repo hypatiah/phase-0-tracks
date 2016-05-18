@@ -94,7 +94,3 @@ end
 #nicely prints each key-value pair (real ==> agent name)
 name_directory.each {|realnm, agentnm| puts "#{agentnm} is actually #{realnm}"}
 exit 
-
-
-
-
