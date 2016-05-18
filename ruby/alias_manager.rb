@@ -13,13 +13,15 @@ chopped_name.each do |character|
 	vowel = ["a", "e", "i", "o", "u"]
 	if  vowel.include? character
 		i = 0
-		if character == vowel(i)
-			character = vowel(i + 1)
+		index = 0
+		while character(index) == vowel(i)
+			character_new = vowel(i).next
+			index += 1
+			i += 1
+			character_new
 		end
 	end
 end
-
-
 
 
 ##split name into two strings of first and last, then reverse the string
