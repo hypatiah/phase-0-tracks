@@ -84,8 +84,14 @@ final_list = pretty_list(list4)
 
 
 #What did you learn about pseudocode from working on this challenge?
+#I learned that I can not write out everything explicitly if I already know a method that is self-explanatory, its pretty much up to the discretion of the programmer
 #What are the tradeoffs of using arrays and hashes for this challenge?
+# I found that arrays were easier to split up the string for, but then it was easier to convert the info to a hash since there were corresponding values for every grocery item
 #What does a method return?
+#because of implicit return in ruby, it always returns the last line of code
 #What kind of things can you pass into methods as arguments?
+# you can pass other methods as arguments, or integers, strings, hashs, arrays
 #How can you pass information between methods?
+# you can nest the methods
 #What concepts were solidified in this challenge, and what concepts are still confusing?
+#psuedocoding was definitely solidified more than previously, although I still have some clarification. I am confused as to whether there is a better way to call all the methods rather than nesting them all, I feel like that may take up a lot of computing time? 
