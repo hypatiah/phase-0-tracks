@@ -18,10 +18,12 @@ class Santa
 		@age = 0
 	end
 
+	#method that adds 1 year to your age
 	def celebrate_birthday(age)
 		@age = age + 1
 	end
 
+	#method that moves the ranking(or index rather) of the reindeer to the end of the array.. as punishment! 
 	def get_mad_at(name)
 	i = 0
 	until i > @reindeer_ranking.length 
@@ -31,6 +33,7 @@ class Santa
 	end
 	i += 1
 	end
+	#prints reindeer ranking to check that works
 	p @reindeer_ranking
 	end
 	
@@ -51,8 +54,10 @@ class Santa
 
 end
 
-
+#DRIVERCODE
+#initalizes new Santa instance called babysanta with a "female" gender and "middle eastern" ethnicity
 babysanta = Santa.new("female", "middle eastern")
+#series of tests to check our methods 
 babysanta.speak
 babysanta.eat_milk_and_cookies("snickerdoodle")
 p babysanta.celebrate_birthday(5)
@@ -64,25 +69,34 @@ p babysanta.gender = "heshe"
 
 
 
-#DRIVERCODE
+
+#initialize empty reindeer array
 reindeer = []
 gender = ["male", "female", "gender3", "gender4", "gender5"]
 ethnicity = ["caucasian", "asian", "middle eastern", "black", "latino"]
+#adds the respective gender and ethnicity element of the arrays into the reindeer array, and does the loop 5 times since thats the length of gender array (can interchange with ethnicity since of same length)
 gender.length.times do |index|
 	reindeer << Santa.new(gender[index], ethnicity[index])
 end
 p reindeer
 
 
+#initializes empty santa directory
 santa_directory = []
+#create sample gender/ethnicity arrays
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-#initialize index
+#initialize counter
 i = 0
+#iterates loop 50 times
 until i > 49
+	#initializes santa as a Santa instance with a random gender and ethnicity attributes (selected from sample gender/ethnicity arrays  above)
 	santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	#assigns santa age attribute to be between 0 and 140
 	santa.age = rand(0..140)
+	#adds santa, which is a Santa instance, to the santa directory array
 	santa_directory << santa
+	#adds 1 to the counter
 	i += 1
 end
 
