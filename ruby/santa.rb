@@ -1,6 +1,6 @@
 class Santa
-	attr_reader :age, :ethnicity
-	attr_accessor :gender
+	attr_reader  :ethnicity
+	attr_accessor :gender, :age
 
 	def speak 
 		puts "Ho, ho, ho! Haaaappy holidays!"
@@ -71,9 +71,23 @@ ethnicity = ["caucasian", "asian", "middle eastern", "black", "latino"]
 gender.length.times do |index|
 	reindeer << Santa.new(gender[index], ethnicity[index])
 end
-
 p reindeer
 
+
+santa_directory = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+#initialize index
+i = 0
+until i > 49
+	santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	santa.age = rand(0..140)
+	santa_directory << santa
+	i += 1
+end
+
+#test that random gender/ethnicity/ age between 0 and 140 is called
+santa_directory.each { |santa| p santa.gender, santa.ethnicity, santa.age}
 
 
 
