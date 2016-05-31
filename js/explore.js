@@ -14,12 +14,14 @@ function reverse(string) {
 		// store string index beginning with largest index and add to empty string
 		new_string = new_string + string[i];
 	}
+	//returns reversed string, since js doesn't have implicit return
 	return new_string;
 }
 
-//DRIVER CODEn
-var happy_backwards = console.log(reverse("Happy"));
-
-// if ("apples" != "oranges") {
-// 	happy_backwards;
-// }
+//DRIVER CODE
+//calls reverse function and stores result as a variable
+var happy_backwards = reverse("Happy");
+//prints variable if condition is true
+if (1 == 1) {
+	console.log(happy_backwards);
+}
