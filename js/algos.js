@@ -47,6 +47,22 @@ function match(hsh1, hsh2){
 	}
 }
 
+//PSEUDOCODE: Generate Random Test Data 
+//Input: integer  used for length
+//Output: returns array of strings of length of integer
+//Steps:
+//define function that takes an integer as a parameter
+//initialize empty array in which we will store random strings
+//create array of words of legnths from 1 to 10
+//iterate integer amount of times, each time storing random index of word into the empty array
+function rand(integer){
+	var array = [];
+	var words = ["a", "ab", "meh", "asff", "asdfg", "asdfgr", "asdferw", "asdferwe", "asdfgerwe", "asdferwerdz"];
+	for (var i =0; i < (integer); i++) {
+		array.push(words[(Math.floor((Math.random() * 9) + 0))]);
+	}
+	return array
+}
 
 //DRIVER CODE
 //test for longphrase function
@@ -59,3 +75,14 @@ console.log(longphrase(array2));
 hash1 = {name: "Tamir", age: 54};
 hash2 = {name: "Steven", age: 54};
 console.log(match(hash1,hash2))
+
+//test for random test data
+// iterates 10 times: generates and prints array
+for (var i=0; i < 10; i++) {
+	var data = rand(Math.floor((Math.random() * 10) + 1));
+	console.log(data);
+	return data;
+}
+//feeds array to longesphrase function and prints result
+console.log(longphrase(data))
+
