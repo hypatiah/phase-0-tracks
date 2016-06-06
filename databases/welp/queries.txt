@@ -1,0 +1,232 @@
+Queries
+- You've joined two tables before. How do you join three?
+
+sqlite> SELECT * FROM businesses, users, reviews;
+1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt|1|5|Great place|2|1
+1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt|2|3|Pretty good|3|2
+1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt|3|1|Awful|4|3
+1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt|4|4|Good place|5|1
+1|Grundy Hollow Wedding Chapel|2|Mandy|Kaling|1|5|Great place|2|1
+1|Grundy Hollow Wedding Chapel|2|Mandy|Kaling|2|3|Pretty good|3|2
+1|Grundy Hollow Wedding Chapel|2|Mandy|Kaling|3|1|Awful|4|3
+1|Grundy Hollow Wedding Chapel|2|Mandy|Kaling|4|4|Good place|5|1
+1|Grundy Hollow Wedding Chapel|3|Angela|Jolie|1|5|Great place|2|1
+1|Grundy Hollow Wedding Chapel|3|Angela|Jolie|2|3|Pretty good|3|2
+1|Grundy Hollow Wedding Chapel|3|Angela|Jolie|3|1|Awful|4|3
+1|Grundy Hollow Wedding Chapel|3|Angela|Jolie|4|4|Good place|5|1
+1|Grundy Hollow Wedding Chapel|4|Steven|Wonder|1|5|Great place|2|1
+1|Grundy Hollow Wedding Chapel|4|Steven|Wonder|2|3|Pretty good|3|2
+1|Grundy Hollow Wedding Chapel|4|Steven|Wonder|3|1|Awful|4|3
+1|Grundy Hollow Wedding Chapel|4|Steven|Wonder|4|4|Good place|5|1
+1|Grundy Hollow Wedding Chapel|5|Holly|Berry|1|5|Great place|2|1
+1|Grundy Hollow Wedding Chapel|5|Holly|Berry|2|3|Pretty good|3|2
+1|Grundy Hollow Wedding Chapel|5|Holly|Berry|3|1|Awful|4|3
+1|Grundy Hollow Wedding Chapel|5|Holly|Berry|4|4|Good place|5|1
+2|Amir's Towing|1|Bradford|Pitt|1|5|Great place|2|1
+2|Amir's Towing|1|Bradford|Pitt|2|3|Pretty good|3|2
+2|Amir's Towing|1|Bradford|Pitt|3|1|Awful|4|3
+2|Amir's Towing|1|Bradford|Pitt|4|4|Good place|5|1
+2|Amir's Towing|2|Mandy|Kaling|1|5|Great place|2|1
+2|Amir's Towing|2|Mandy|Kaling|2|3|Pretty good|3|2
+2|Amir's Towing|2|Mandy|Kaling|3|1|Awful|4|3
+2|Amir's Towing|2|Mandy|Kaling|4|4|Good place|5|1
+2|Amir's Towing|3|Angela|Jolie|1|5|Great place|2|1
+2|Amir's Towing|3|Angela|Jolie|2|3|Pretty good|3|2
+2|Amir's Towing|3|Angela|Jolie|3|1|Awful|4|3
+2|Amir's Towing|3|Angela|Jolie|4|4|Good place|5|1
+2|Amir's Towing|4|Steven|Wonder|1|5|Great place|2|1
+2|Amir's Towing|4|Steven|Wonder|2|3|Pretty good|3|2
+2|Amir's Towing|4|Steven|Wonder|3|1|Awful|4|3
+2|Amir's Towing|4|Steven|Wonder|4|4|Good place|5|1
+2|Amir's Towing|5|Holly|Berry|1|5|Great place|2|1
+2|Amir's Towing|5|Holly|Berry|2|3|Pretty good|3|2
+2|Amir's Towing|5|Holly|Berry|3|1|Awful|4|3
+2|Amir's Towing|5|Holly|Berry|4|4|Good place|5|1
+3|The Beagle Nightclub|1|Bradford|Pitt|1|5|Great place|2|1
+3|The Beagle Nightclub|1|Bradford|Pitt|2|3|Pretty good|3|2
+3|The Beagle Nightclub|1|Bradford|Pitt|3|1|Awful|4|3
+3|The Beagle Nightclub|1|Bradford|Pitt|4|4|Good place|5|1
+3|The Beagle Nightclub|2|Mandy|Kaling|1|5|Great place|2|1
+3|The Beagle Nightclub|2|Mandy|Kaling|2|3|Pretty good|3|2
+3|The Beagle Nightclub|2|Mandy|Kaling|3|1|Awful|4|3
+3|The Beagle Nightclub|2|Mandy|Kaling|4|4|Good place|5|1
+3|The Beagle Nightclub|3|Angela|Jolie|1|5|Great place|2|1
+3|The Beagle Nightclub|3|Angela|Jolie|2|3|Pretty good|3|2
+3|The Beagle Nightclub|3|Angela|Jolie|3|1|Awful|4|3
+3|The Beagle Nightclub|3|Angela|Jolie|4|4|Good place|5|1
+3|The Beagle Nightclub|4|Steven|Wonder|1|5|Great place|2|1
+3|The Beagle Nightclub|4|Steven|Wonder|2|3|Pretty good|3|2
+3|The Beagle Nightclub|4|Steven|Wonder|3|1|Awful|4|3
+3|The Beagle Nightclub|4|Steven|Wonder|4|4|Good place|5|1
+3|The Beagle Nightclub|5|Holly|Berry|1|5|Great place|2|1
+3|The Beagle Nightclub|5|Holly|Berry|2|3|Pretty good|3|2
+3|The Beagle Nightclub|5|Holly|Berry|3|1|Awful|4|3
+3|The Beagle Nightclub|5|Holly|Berry|4|4|Good place|5|1
+4|Lotus Yoga|1|Bradford|Pitt|1|5|Great place|2|1
+4|Lotus Yoga|1|Bradford|Pitt|2|3|Pretty good|3|2
+4|Lotus Yoga|1|Bradford|Pitt|3|1|Awful|4|3
+4|Lotus Yoga|1|Bradford|Pitt|4|4|Good place|5|1
+4|Lotus Yoga|2|Mandy|Kaling|1|5|Great place|2|1
+4|Lotus Yoga|2|Mandy|Kaling|2|3|Pretty good|3|2
+4|Lotus Yoga|2|Mandy|Kaling|3|1|Awful|4|3
+4|Lotus Yoga|2|Mandy|Kaling|4|4|Good place|5|1
+4|Lotus Yoga|3|Angela|Jolie|1|5|Great place|2|1
+4|Lotus Yoga|3|Angela|Jolie|2|3|Pretty good|3|2
+4|Lotus Yoga|3|Angela|Jolie|3|1|Awful|4|3
+4|Lotus Yoga|3|Angela|Jolie|4|4|Good place|5|1
+4|Lotus Yoga|4|Steven|Wonder|1|5|Great place|2|1
+4|Lotus Yoga|4|Steven|Wonder|2|3|Pretty good|3|2
+4|Lotus Yoga|4|Steven|Wonder|3|1|Awful|4|3
+4|Lotus Yoga|4|Steven|Wonder|4|4|Good place|5|1
+4|Lotus Yoga|5|Holly|Berry|1|5|Great place|2|1
+4|Lotus Yoga|5|Holly|Berry|2|3|Pretty good|3|2
+4|Lotus Yoga|5|Holly|Berry|3|1|Awful|4|3
+4|Lotus Yoga|5|Holly|Berry|4|4|Good place|5|1
+5|Sushi World|1|Bradford|Pitt|1|5|Great place|2|1
+5|Sushi World|1|Bradford|Pitt|2|3|Pretty good|3|2
+5|Sushi World|1|Bradford|Pitt|3|1|Awful|4|3
+5|Sushi World|1|Bradford|Pitt|4|4|Good place|5|1
+5|Sushi World|2|Mandy|Kaling|1|5|Great place|2|1
+5|Sushi World|2|Mandy|Kaling|2|3|Pretty good|3|2
+5|Sushi World|2|Mandy|Kaling|3|1|Awful|4|3
+5|Sushi World|2|Mandy|Kaling|4|4|Good place|5|1
+5|Sushi World|3|Angela|Jolie|1|5|Great place|2|1
+5|Sushi World|3|Angela|Jolie|2|3|Pretty good|3|2
+5|Sushi World|3|Angela|Jolie|3|1|Awful|4|3
+5|Sushi World|3|Angela|Jolie|4|4|Good place|5|1
+5|Sushi World|4|Steven|Wonder|1|5|Great place|2|1
+5|Sushi World|4|Steven|Wonder|2|3|Pretty good|3|2
+5|Sushi World|4|Steven|Wonder|3|1|Awful|4|3
+5|Sushi World|4|Steven|Wonder|4|4|Good place|5|1
+5|Sushi World|5|Holly|Berry|1|5|Great place|2|1
+5|Sushi World|5|Holly|Berry|2|3|Pretty good|3|2
+5|Sushi World|5|Holly|Berry|3|1|Awful|4|3
+5|Sushi World|5|Holly|Berry|4|4|Good place|5|1
+
+- There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users, businesses, reviews;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Great place
+Bradford|Pitt|Grundy Hollow Wedding Chapel|3|Pretty good
+Bradford|Pitt|Grundy Hollow Wedding Chapel|1|Awful
+Bradford|Pitt|Grundy Hollow Wedding Chapel|4|Good place
+Bradford|Pitt|Amir's Towing|5|Great place
+Bradford|Pitt|Amir's Towing|3|Pretty good
+Bradford|Pitt|Amir's Towing|1|Awful
+Bradford|Pitt|Amir's Towing|4|Good place
+Bradford|Pitt|The Beagle Nightclub|5|Great place
+Bradford|Pitt|The Beagle Nightclub|3|Pretty good
+Bradford|Pitt|The Beagle Nightclub|1|Awful
+Bradford|Pitt|The Beagle Nightclub|4|Good place
+Bradford|Pitt|Lotus Yoga|5|Great place
+Bradford|Pitt|Lotus Yoga|3|Pretty good
+Bradford|Pitt|Lotus Yoga|1|Awful
+Bradford|Pitt|Lotus Yoga|4|Good place
+Bradford|Pitt|Sushi World|5|Great place
+Bradford|Pitt|Sushi World|3|Pretty good
+Bradford|Pitt|Sushi World|1|Awful
+Bradford|Pitt|Sushi World|4|Good place
+Mandy|Kaling|Grundy Hollow Wedding Chapel|5|Great place
+Mandy|Kaling|Grundy Hollow Wedding Chapel|3|Pretty good
+Mandy|Kaling|Grundy Hollow Wedding Chapel|1|Awful
+Mandy|Kaling|Grundy Hollow Wedding Chapel|4|Good place
+Mandy|Kaling|Amir's Towing|5|Great place
+Mandy|Kaling|Amir's Towing|3|Pretty good
+Mandy|Kaling|Amir's Towing|1|Awful
+Mandy|Kaling|Amir's Towing|4|Good place
+Mandy|Kaling|The Beagle Nightclub|5|Great place
+Mandy|Kaling|The Beagle Nightclub|3|Pretty good
+Mandy|Kaling|The Beagle Nightclub|1|Awful
+Mandy|Kaling|The Beagle Nightclub|4|Good place
+Mandy|Kaling|Lotus Yoga|5|Great place
+Mandy|Kaling|Lotus Yoga|3|Pretty good
+Mandy|Kaling|Lotus Yoga|1|Awful
+Mandy|Kaling|Lotus Yoga|4|Good place
+Mandy|Kaling|Sushi World|5|Great place
+Mandy|Kaling|Sushi World|3|Pretty good
+Mandy|Kaling|Sushi World|1|Awful
+Mandy|Kaling|Sushi World|4|Good place
+Angela|Jolie|Grundy Hollow Wedding Chapel|5|Great place
+Angela|Jolie|Grundy Hollow Wedding Chapel|3|Pretty good
+Angela|Jolie|Grundy Hollow Wedding Chapel|1|Awful
+Angela|Jolie|Grundy Hollow Wedding Chapel|4|Good place
+Angela|Jolie|Amir's Towing|5|Great place
+Angela|Jolie|Amir's Towing|3|Pretty good
+Angela|Jolie|Amir's Towing|1|Awful
+Angela|Jolie|Amir's Towing|4|Good place
+Angela|Jolie|The Beagle Nightclub|5|Great place
+Angela|Jolie|The Beagle Nightclub|3|Pretty good
+Angela|Jolie|The Beagle Nightclub|1|Awful
+Angela|Jolie|The Beagle Nightclub|4|Good place
+Angela|Jolie|Lotus Yoga|5|Great place
+Angela|Jolie|Lotus Yoga|3|Pretty good
+Angela|Jolie|Lotus Yoga|1|Awful
+Angela|Jolie|Lotus Yoga|4|Good place
+Angela|Jolie|Sushi World|5|Great place
+Angela|Jolie|Sushi World|3|Pretty good
+Angela|Jolie|Sushi World|1|Awful
+Angela|Jolie|Sushi World|4|Good place
+Steven|Wonder|Grundy Hollow Wedding Chapel|5|Great place
+Steven|Wonder|Grundy Hollow Wedding Chapel|3|Pretty good
+Steven|Wonder|Grundy Hollow Wedding Chapel|1|Awful
+Steven|Wonder|Grundy Hollow Wedding Chapel|4|Good place
+Steven|Wonder|Amir's Towing|5|Great place
+Steven|Wonder|Amir's Towing|3|Pretty good
+Steven|Wonder|Amir's Towing|1|Awful
+Steven|Wonder|Amir's Towing|4|Good place
+Steven|Wonder|The Beagle Nightclub|5|Great place
+Steven|Wonder|The Beagle Nightclub|3|Pretty good
+Steven|Wonder|The Beagle Nightclub|1|Awful
+Steven|Wonder|The Beagle Nightclub|4|Good place
+Steven|Wonder|Lotus Yoga|5|Great place
+Steven|Wonder|Lotus Yoga|3|Pretty good
+Steven|Wonder|Lotus Yoga|1|Awful
+Steven|Wonder|Lotus Yoga|4|Good place
+Steven|Wonder|Sushi World|5|Great place
+Steven|Wonder|Sushi World|3|Pretty good
+Steven|Wonder|Sushi World|1|Awful
+Steven|Wonder|Sushi World|4|Good place
+Holly|Berry|Grundy Hollow Wedding Chapel|5|Great place
+Holly|Berry|Grundy Hollow Wedding Chapel|3|Pretty good
+Holly|Berry|Grundy Hollow Wedding Chapel|1|Awful
+Holly|Berry|Grundy Hollow Wedding Chapel|4|Good place
+Holly|Berry|Amir's Towing|5|Great place
+Holly|Berry|Amir's Towing|3|Pretty good
+Holly|Berry|Amir's Towing|1|Awful
+Holly|Berry|Amir's Towing|4|Good place
+Holly|Berry|The Beagle Nightclub|5|Great place
+Holly|Berry|The Beagle Nightclub|3|Pretty good
+Holly|Berry|The Beagle Nightclub|1|Awful
+Holly|Berry|The Beagle Nightclub|4|Good place
+Holly|Berry|Lotus Yoga|5|Great place
+Holly|Berry|Lotus Yoga|3|Pretty good
+Holly|Berry|Lotus Yoga|1|Awful
+Holly|Berry|Lotus Yoga|4|Good place
+Holly|Berry|Sushi World|5|Great place
+Holly|Berry|Sushi World|3|Pretty good
+Holly|Berry|Sushi World|1|Awful
+Holly|Berry|Sushi World|4|Good place
+
+- How do you view the data of all three tables for just one particular business? 
+
+sqlite> SELECT * FROM businesses, users, reviews WHERE businesses.name="Amir's Towing";
+2|Amir's Towing|1|Bradford|Pitt|1|5|Great place|2|1
+2|Amir's Towing|1|Bradford|Pitt|2|3|Pretty good|3|2
+2|Amir's Towing|1|Bradford|Pitt|3|1|Awful|4|3
+2|Amir's Towing|1|Bradford|Pitt|4|4|Good place|5|1
+2|Amir's Towing|2|Mandy|Kaling|1|5|Great place|2|1
+2|Amir's Towing|2|Mandy|Kaling|2|3|Pretty good|3|2
+2|Amir's Towing|2|Mandy|Kaling|3|1|Awful|4|3
+2|Amir's Towing|2|Mandy|Kaling|4|4|Good place|5|1
+2|Amir's Towing|3|Angela|Jolie|1|5|Great place|2|1
+2|Amir's Towing|3|Angela|Jolie|2|3|Pretty good|3|2
+2|Amir's Towing|3|Angela|Jolie|3|1|Awful|4|3
+2|Amir's Towing|3|Angela|Jolie|4|4|Good place|5|1
+2|Amir's Towing|4|Steven|Wonder|1|5|Great place|2|1
+2|Amir's Towing|4|Steven|Wonder|2|3|Pretty good|3|2
+2|Amir's Towing|4|Steven|Wonder|3|1|Awful|4|3
+2|Amir's Towing|4|Steven|Wonder|4|4|Good place|5|1
+2|Amir's Towing|5|Holly|Berry|1|5|Great place|2|1
+2|Amir's Towing|5|Holly|Berry|2|3|Pretty good|3|2
+2|Amir's Towing|5|Holly|Berry|3|1|Awful|4|3
+2|Amir's Towing|5|Holly|Berry|4|4|Good place|5|1
