@@ -1,0 +1,53 @@
+1. Display the information in one table (either table is fine)
+sqlite> SELECT * FROM students;
+1|Sam|15|true|2
+2|Jade|17|false|1
+3|Ruby|18|false|3
+4|Ignacio|17|true|3
+5|Izzy|16|true|2
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+sqlite> UPDATE students SET teacher_id=2 WHERE name="Jade";
+
+3. Display the information in both tables using one query.
+sqlite> SELECT * FROM teachers, students;
+1|Mrs. Robinson|1|Sam|15|true|1
+1|Mrs. Robinson|2|Jade|17|false|2
+1|Mrs. Robinson|3|Ruby|18|false|3
+1|Mrs. Robinson|4|Ignacio|17|true|3
+1|Mrs. Robinson|5|Izzy|16|true|2
+2|Mr. T|1|Sam|15|true|1
+2|Mr. T|2|Jade|17|false|2
+2|Mr. T|3|Ruby|18|false|3
+2|Mr. T|4|Ignacio|17|true|3
+2|Mr. T|5|Izzy|16|true|2
+3|Professor Xavier|1|Sam|15|true|1
+3|Professor Xavier|2|Jade|17|false|2
+3|Professor Xavier|3|Ruby|18|false|3
+3|Professor Xavier|4|Ignacio|17|true|3
+3|Professor Xavier|5|Izzy|16|true|2
+
+4.Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+sqlite> SELECT teachers.name, students.name, students.quiet FROM teachers, students;
+Mrs. Robinson|Sam|true
+Mrs. Robinson|Jade|false
+Mrs. Robinson|Ruby|false
+Mrs. Robinson|Ignacio|true
+Mrs. Robinson|Izzy|true
+Mr. T|Sam|true
+Mr. T|Jade|false
+Mr. T|Ruby|false
+Mr. T|Ignacio|true
+Mr. T|Izzy|true
+Professor Xavier|Sam|true
+Professor Xavier|Jade|false
+Professor Xavier|Ruby|false
+Professor Xavier|Ignacio|true
+Professor Xavier|Izzy|true
+
+5.Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> DELETE FROM students WHERE age=15;
+sqlite> SELECT * FROM students;                                                       2|Jade|17|false|2
+3|Ruby|18|false|3
+4|Ignacio|17|true|3
+5|Izzy|16|true|2
