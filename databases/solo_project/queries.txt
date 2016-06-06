@@ -51,3 +51,43 @@ sqlite> SELECT * FROM students;                                                 
 3|Ruby|18|false|3
 4|Ignacio|17|true|3
 5|Izzy|16|true|2
+
+RELEASE 3
+Join statements:
+1. 
+sqlite> SELECT students.name, teachers.name FROM students JOIN teachers ON students.teacher_id = teachers.id;
+Jade|Mr. T
+Ruby|Professor Xavier
+Ignacio|Professor Xavier
+Izzy|Mr. T
+
+2.
+sqlite> SELECT * FROM students INNER JOIN teachers ON students.teacher_id = teachers.id;
+2|Jade|17|false|2|2|Mr. T
+3|Ruby|18|false|3|3|Professor Xavier
+4|Ignacio|17|true|3|3|Professor Xavier
+5|Izzy|16|true|2|2|Mr. T
+
+sqlite> SELECT * FROM students INNER JOIN teachers ON students.quiet="true";
+4|Ignacio|17|true|3|1|Mrs. Robinson
+5|Izzy|16|true|2|1|Mrs. Robinson
+4|Ignacio|17|true|3|2|Mr. T
+5|Izzy|16|true|2|2|Mr. T
+4|Ignacio|17|true|3|3|Professor Xavier
+5|Izzy|16|true|2|3|Professor Xavier
+
+3.
+sqlite> SELECT * FROM teachers LEFT JOIN students ON students.teacher_id = teachers.id;
+1|Mrs. Robinson|||||
+2|Mr. T|5|Izzy|16|true|2
+2|Mr. T|2|Jade|17|false|2
+3|Professor Xavier|4|Ignacio|17|true|3
+3|Professor Xavier|3|Ruby|18|false|3
+
+sqlite> SELECT * FROM teachers LEFT JOIN students ON students.teacher_id = 2;
+1|Mrs. Robinson|5|Izzy|16|true|2
+1|Mrs. Robinson|2|Jade|17|false|2
+2|Mr. T|5|Izzy|16|true|2
+2|Mr. T|2|Jade|17|false|2
+3|Professor Xavier|5|Izzy|16|true|2
+3|Professor Xavier|2|Jade|17|false|2
