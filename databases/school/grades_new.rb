@@ -6,7 +6,7 @@ require 'faker'
 db = SQLite3::Database.new("grades_new.db")
 db.results_as_hash = true
 
-#initialize class_table
+#initialize test_table
 create_test_table_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS test(
     id INTEGER PRIMARY KEY,

@@ -5,21 +5,15 @@ require 'sqlite3'
 require 'faker'
 
 # create SQLite3 database
-db = SQLite3::Database.new("class.db")
+db = SQLite3::Database.new("test.db")
 db.results_as_hash = true
 
-# create_course_table_cmd = <<-SQL
-#   CREATE TABLE IF NOT EXISTS courses(
-#     id INTEGER PRIMARY KEY,
-#     course_name VARCHAR(255),
-# SQL
-
-#initialize class_table
-create_class_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS class(
+#initialize test_table
+create_test_table_cmd = <<-SQL
+   CREATE TABLE IF NOT EXISTS test(
     id INTEGER PRIMARY KEY,
-    student VARCHAR(255),
-    course VARCHAR(255),
+    student_first VARCHAR(255),
+    student_last VARCHAR(255),
     grade INT
   );
 SQL
@@ -28,14 +22,11 @@ SQL
 # db.execute(create_course_table_cmd)
 db.execute(create_class_table_cmd)
 
-# def create_course(db, name)
-# 	db.execute("INSERT INTO courses (name) VALUES (?)", [name])
-# end
-
-#method add a student's name, course and grade into class database
-def create_class(db, student, course, grade)
-  db.execute("INSERT INTO class (student, course, grade) VALUES (?, ?, ?);", [student, course, grade])
+#method to add a insert a student's test scores
+def create_test(db, student_first, student_last, grade)
+  db.execute("INSERT INTO test (student_first, student_last, grade) VALUES (?, ?, ?);", [student_first, student_last, grade])
 end
+
 
 #add 100 students info to database with randomized data
 100.times do
