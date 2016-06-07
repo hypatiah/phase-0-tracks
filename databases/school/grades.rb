@@ -47,6 +47,9 @@ while response != "4"
 	if response == "4"
 		exit
 	elsif response == "1"
+		puts "What would you like to name the new test?"
+		test_name = gets.chomp
+		new_test(test_name)
 	elsif response == "2"
 		puts "What is the student's first name?"
 		first_name = gets.chomp
