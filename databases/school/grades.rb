@@ -30,7 +30,7 @@ response = ""
 puts "Welcome to Grade Tracker!"
 while response != "4"
 	puts "Which of the following would you like to do:"
-	puts "1. Input new test scores"
+	puts "1. Input new test"
 	puts "2. Update test scores"
 	puts "3. View current grades"
 	puts "4. exit"
@@ -40,6 +40,13 @@ while response != "4"
 		exit
 	elsif response == "1"
 	elsif response == "2"
+		puts "What is the student's first name?"
+		first_name = gets.chomp
+		puts "What is the student's last name?"
+		last_name = gets.chomp
+		puts "What is the students grade out of 100?"
+		grade = gets.chomp
+		create_test(db, first_name, last_name, grade)
 	elsif response == "3"
 	else puts "Error: input invalid."
 	end
