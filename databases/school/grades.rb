@@ -33,6 +33,20 @@ def new_test(test_name)
     grade INT
   );")
 end
+
+#method prompts user for first, last, and grade of student
+def add_test_prompt
+	puts "Which test would you like to add to?"
+	test = gets.chomp
+	puts "What is the student's first name?"
+	first_name = gets.chomp
+	puts "What is the student's last name?"
+	last_name = gets.chomp
+	puts "What is the students grade out of 100?"
+	grade = gets.chomp
+	add_to_test(test, first_name, last_name, grade)
+end
+
 #USER INTERFACE
 response = ""
 puts "Welcome to Grade Tracker!"
@@ -51,16 +65,9 @@ while response != "4"
 		test_name = gets.chomp
 		new_test(test_name)
 	elsif response == "2"
-		puts "Which test would you like to add to?"
-		test = gets.chomp
-		puts "What is the student's first name?"
-		first_name = gets.chomp
-		puts "What is the student's last name?"
-		last_name = gets.chomp
-		puts "What is the students grade out of 100?"
-		grade = gets.chomp
-		add_to_test(test, first_name, last_name, grade)
+		add_test_prompt
 	elsif response == "3"
+		db.execute("SELECT * FROM grades")
 	else puts "Error: input invalid."
 	end
 end
