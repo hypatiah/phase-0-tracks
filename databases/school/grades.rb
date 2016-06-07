@@ -39,7 +39,7 @@ puts "Welcome to Grade Tracker!"
 while response != "4"
 	puts "Which of the following would you like to do:"
 	puts "1. Input new test"
-	puts "2. Update test scores"
+	puts "2. Add test scores to old test"
 	puts "3. View current grades"
 	puts "4. exit"
 	puts "Please ype '1', '2', '3', or '4'"
@@ -51,13 +51,15 @@ while response != "4"
 		test_name = gets.chomp
 		new_test(test_name)
 	elsif response == "2"
+		puts "Which test would you like to add to?"
+		test = gets.chomp
 		puts "What is the student's first name?"
 		first_name = gets.chomp
 		puts "What is the student's last name?"
 		last_name = gets.chomp
 		puts "What is the students grade out of 100?"
 		grade = gets.chomp
-		add_to_test(db, first_name, last_name, grade)
+		add_to_test(test, first_name, last_name, grade)
 	elsif response == "3"
 	else puts "Error: input invalid."
 	end
