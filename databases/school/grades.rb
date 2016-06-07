@@ -21,10 +21,18 @@ SQL
 db.execute(create_test_table_cmd)
 
 #method to add a insert a student's test scores
-def create_test(db, student_first, student_last, grade)
-  db.execute("INSERT INTO test (student_first, student_last, grade) VALUES (?, ?, ?);", [student_first, student_last, grade])
+def add_to_test(test, student_first, student_last, grade)
+  db.execute("INSERT INTO #{test} (student_first, student_last, grade) VALUES (?, ?, ?);", [student_first, student_last, grade])
 end
 
+#method to create a new test table
+def new_test(test_name)
+	db.execute("CREATE TABLE IF NOT EXISTS #{test_name} (id INTEGER PRIMARY KEY,
+    student_first VARCHAR(255),
+    student_last VARCHAR(255),
+    grade INT
+  );")
+end
 #USER INTERFACE
 response = ""
 puts "Welcome to Grade Tracker!"
@@ -46,7 +54,7 @@ while response != "4"
 		last_name = gets.chomp
 		puts "What is the students grade out of 100?"
 		grade = gets.chomp
-		create_test(db, first_name, last_name, grade)
+		add_to_test(db, first_name, last_name, grade)
 	elsif response == "3"
 	else puts "Error: input invalid."
 	end
