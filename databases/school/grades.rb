@@ -28,8 +28,29 @@ def create_test(db, student_first, student_last, grade)
 end
 
 
-#add 100 students info to database with randomized data
-100.times do
-	# create_course(db, Faker::Commerce.department)
-	create_class(db, Faker::Name.name, Faker::Commerce.department, Faker::Number.decimal(2))
+# #add 100 students info to database with randomized data
+# 100.times do
+# 	# create_course(db, Faker::Commerce.department)
+# 	create_class(db, Faker::Name.name, Faker::Commerce.department, Faker::Number.decimal(2))
+# end
+
+#USER INTERFACE
+response = ""
+puts "Welcome to Grade Tracker!"
+while response != "4"
+	puts "Which of the following would you like to do:"
+	puts "1. Input new test scores"
+	puts "2. Update test scores"
+	puts "3. View current grades"
+	puts "4. exit"
+	puts "Please ype '1', '2', '3', or '4'"
+	response = gets.chomp
+	if response == "4"
+		exit
+	elsif response == "1"
+	elsif response == "2"
+	elsif response == "3"
+	else puts "Error: input invalid."
+	end
 end
+exit
