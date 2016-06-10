@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+	<a href="http://jquery.com/">jQuery</a>
+	<p class="title"> Wonders of the World </p>
+	<ol id ="wonders_world">
+		<li> Great Pyramid of Giza </li>
+		<li> Hanging Gardens of Babylon </li>
+		<li> Statue of Zeus at Olympia </li>
+		<li> Lighthouse of Alexandria </li>
+		<li> Mausoleum at Halicarnassus
+		</li>
+		<li> Colossus of Rhodes</li>
+		<li> Temple of Artemis at Ephesus </li>
+	</ol
+	<script src="jquery.js"></script>
+	<script>
+		window.onload = function() {
+			alert("Welcome");
+
+		};
+		//$ alias for jQuery
+		//ready: statement that runs code as soon as the doc is ready to be manipulated, after DOM loads
+		$( document ).ready(function() {
+			$( "a" ).click(function( event ) {
+			alert( "Thanks for visiting!" );
+			});
+			
+			
+		});
+		
+		// `>` selects only direct children of wonders_world with `li`
+		$( "#wonders_world > li" ).fadeOut(1000);
+		
+		//select first item, aka Great Pyramid of Giza
+		$( "#wonders_world li:first" );
+
+		//select last item
+		$( "#wonders_world li:last" );
+
+		//select every other item, can also use :even
+		$( "#wonders_world li:odd");
+
+		//select multiple elements (here selecting both title class and wonders_world id
+		$( ".title, #wonders_world" );
+	</script>
+</body>
+</html>
