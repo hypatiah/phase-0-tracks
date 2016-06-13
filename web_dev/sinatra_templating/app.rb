@@ -29,3 +29,4 @@ end
 get '/table' do
 	@students = db.execute("SELECT * FROM students")
 	erb :table_student
+end
