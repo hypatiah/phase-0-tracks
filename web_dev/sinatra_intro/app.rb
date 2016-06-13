@@ -58,5 +58,14 @@ get '/great_job' do
     "Good job, #{params[:name]}"
   else 
     "Good job!"
-  end
+  end  
+end
+
+#route uses route parameters to add 2 numbers and respond with a result
+get '/:num1/add/:num2' do
+  numb1 = :num1.to_s
+  numb2 = :num2.to_s
+  number1 = numb1.to_i
+  number2 = numb2.to_i
+  result = number1 + number2
 end
